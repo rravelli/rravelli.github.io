@@ -17,6 +17,10 @@
 			"3": {
 				"title": "Inforeg",
 				"description": "Logiciel pédagogique pour la théorie des graphes."
+			},
+			"4": {
+				"title": "Tonique DAW",
+				"description": "Un logiciel d'édition et de création musicale fait avec Rust."
 			}
 		}
 	},
@@ -58,6 +62,7 @@
 	"contact": {
 		"title": "Restons en contact",
 		"contactMe": "Me contacter",
-		"viewResume": "Voir mon CV"
+		"viewResume": "Voir mon CV",
+		"description": "Intéressé par mon profil ? N'hésitez pas à me contacter, je serais ravi de collaborer avec vous."
 	}
 }
