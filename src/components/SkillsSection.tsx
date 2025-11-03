@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
 const languages = [
-	{ name: "Javascript", icon: "/showcase/icons/javascript.png" },
+	{ name: "Rust", icon: "/showcase/icons/rust.png" },
 	{ name: "Typescript", icon: "/showcase/icons/typescript.png" },
 	{ name: "Python", icon: "/showcase/icons/python.png" },
 	{ name: "Java", icon: "/showcase/icons/java.png" },

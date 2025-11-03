@@ -1,6 +1,5 @@
 import { motion, Variants } from "framer-motion";
 import { EMAIL, GITHUB_URL, LINKEDIN_URL } from "../constants";
-import { t } from "i18next";
 import { useTranslation } from "react-i18next";
 
 const langs: { [l: string]: { name: string } } = {
@@ -160,15 +159,16 @@ export default function HeroSection() {
 				</div>
 			</div>
 
-			<motion.div
+			<motion.a
 				initial={{ y: 50, opacity: 0 }}
 				animate={{ y: 0, opacity: 1 }}
+				href="#projects"
 				transition={{ duration: 0.8, delay: 0.8 }}
 				className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
 			>
-				<div className="animate-bounce">
+				<div className="animate-bounce hover:bg-gray-500/50 p-2 rounded-full">
 					<svg
-						className="w-6 h-6 text-gray-400"
+						className="w-6 h-6 text-gray-400 "
 						fill="none"
 						stroke="currentColor"
 						viewBox="0 0 24 24"
@@ -181,7 +181,7 @@ export default function HeroSection() {
 						/>
 					</svg>
 				</div>
-			</motion.div>
+			</motion.a>
 		</motion.section>
 	);
 }

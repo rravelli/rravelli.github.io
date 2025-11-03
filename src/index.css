@@ -4,6 +4,10 @@
 	--breakpoint-xs: 20rem;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	background-color: #000;
 	overflow-x: hidden;

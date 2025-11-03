@@ -25,8 +25,7 @@ export default function ContactSection() {
 					transition={{ duration: 0.6, delay: 0.2 }}
 					className="text-gray-300 mb-6"
 				>
-					Have a project in mind? Let&apos;s create something amazing
-					together.
+					{t("contact.description")}
 				</motion.p>
 
 				<motion.div

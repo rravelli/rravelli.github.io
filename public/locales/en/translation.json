@@ -17,6 +17,10 @@
 			"3": {
 				"title": "Inforeg",
 				"description": "Pedagogical software for graph theory."
+			},
+			"4": {
+				"title": "Tonique DAW",
+				"description": "A software to create and edit music made with Rust."
 			}
 		}
 	},
@@ -58,6 +62,7 @@
 	"contact": {
 		"title": "Let's Connect",
 		"contactMe": "Get in Touch",
-		"viewResume": "View Resume"
+		"viewResume": "View Resume",
+		"description": "Have a project in mind? Let&apos;s create something amazing \t\t\t\t\ttogether."
 	}
 }
