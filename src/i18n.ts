@@ -13,12 +13,18 @@ i18n.use(LanguageDetector)
 	.init({
 		debug: process.env.NODE_ENV === "development",
 		fallbackLng: "en",
+		load: "languageOnly",
 		interpolation: {
 			escapeValue: false, // not needed for react as it escapes by default
 		},
 		backend: {
-			loadPath: "/showcase/locales/{{lng}}/{{ns}}.json",
+			loadPath: "/locales/{{lng}}/{{ns}}.json",
 		},
 	});
+
+// Tells browsers and screen readers which language the page is in.
+i18n.on("languageChanged", (language) => {
+	document.documentElement.lang = language;
+});
 
 export default i18n;

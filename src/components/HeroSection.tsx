@@ -61,7 +61,7 @@ export default function HeroSection() {
 			/>
 			<div className="relative z-10 w-full max-w-5xl flex flex-col md:flex-row items-center justify-center gap-8 md:gap-14">
 				<picture className="shrink-0">
-					<source media="(min-width: 768px)" srcSet="/showcase/images/profile-full.webp" />
+					<source media="(min-width: 768px)" srcSet="/images/profile-full.webp" />
 					<motion.img
 						initial={{
 							y: 100,
@@ -77,7 +77,7 @@ export default function HeroSection() {
 								delay: 0.4,
 							},
 						}}
-						src="/showcase/images/headshot.webp"
+						src="/images/headshot.webp"
 						alt="Rémi Ravelli"
 						className="h-44 w-44 rounded-full object-cover bg-gradient-to-br from-blue-500/40 to-purple-600/40 ring-1 ring-white/20 md:h-[32rem] md:w-auto md:rounded-none md:bg-none md:ring-0 md:[filter:drop-shadow(-10px_0_0_rgba(17,24,39,0.7))_drop-shadow(10px_0_0_rgba(17,24,39,0.7))_drop-shadow(10px_0_40px_rgba(0,0,0,0.3))]"
 					/>

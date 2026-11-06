@@ -1,6 +1,6 @@
 # Remi Ravelli's Portfolio
 
-See the published website at [rravelli.github.io/showcase](https://rravelli.github.io/showcase)
+See the published website at [rravelli.github.io](https://rravelli.github.io)
 
 My Portfolio static website made with React, Tailwind, Vite, i18n-next and Framer-motion
 

@@ -6,32 +6,11 @@
 	},
 	"tonique": {
 		"headline": "A free, open-source music studio for Linux, macOS and Windows.",
-		"description": "Bring in your audio, build your track and export it. No account needed.",
+		"description": "Bring in your audio, build your track and export it.",
 		"download": "Download for free",
 		"source": "Source code",
 		"imageAlt": "Tonique with a project open: colored audio clips on the timeline, drums in a group, the effects browser and the mixer",
-		"steps": {
-			"arrange": {
-				"title": "Arrange",
-				"description": "Drag in your audio files, loop clips and group tracks on the timeline."
-			},
-			"mix": {
-				"title": "Mix",
-				"description": "Balance your tracks with the mixer and shape them with filter and echo."
-			},
-			"finish": {
-				"title": "Finish",
-				"description": "Save your project and export your track to WAV."
-			}
-		},
-		"performance": {
-			"title": "Built for performance",
-			"description": "Written in Rust, compiled to native code and able to use multiple CPU cores."
-		},
-		"openSource": {
-			"title": "Open source",
-			"description": "All the code is on GitHub under the MIT or Apache-2.0 license. Read it, change it or contribute."
-		}
+		"learnMore": "Discover Tonique"
 	},
 	"projects": {
 		"title": "Other projects",
