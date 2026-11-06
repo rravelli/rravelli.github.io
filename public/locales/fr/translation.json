@@ -1,31 +1,63 @@
 {
 	"hero": {
-		"title": "Développeur Full Stack / Ingénieur Logiciel"
+		"title": "Ingénieur Backend chez Dedomainia",
+		"tagline": "En parallèle, je développe Tonique, un studio de musique gratuit et open source écrit en Rust.",
+		"discoverTonique": "Découvrir Tonique"
+	},
+	"tonique": {
+		"headline": "Un studio de musique gratuit et open source pour Linux, macOS et Windows.",
+		"description": "Importez vos sons, construisez votre morceau et exportez-le. Aucun compte requis.",
+		"download": "Télécharger gratuitement",
+		"source": "Code source",
+		"imageAlt": "Tonique avec un projet ouvert : des clips audio colorés sur la timeline, une batterie groupée, le navigateur d'effets et la table de mixage",
+		"steps": {
+			"arrange": {
+				"title": "Arranger",
+				"description": "Glissez vos fichiers audio, bouclez vos clips et groupez vos pistes sur la timeline."
+			},
+			"mix": {
+				"title": "Mixer",
+				"description": "Équilibrez vos pistes avec la table de mixage et sculptez-les avec le filtre et l'écho."
+			},
+			"finish": {
+				"title": "Finaliser",
+				"description": "Sauvegardez votre projet et exportez votre morceau en WAV."
+			}
+		},
+		"performance": {
+			"title": "Conçu pour la performance",
+			"description": "Écrit en Rust, compilé en code natif et capable d'exploiter plusieurs cœurs."
+		},
+		"openSource": {
+			"title": "Open source",
+			"description": "Tout le code est sur GitHub sous licence MIT ou Apache-2.0. Lisez-le, modifiez-le ou contribuez."
+		}
 	},
 	"projects": {
-		"title": "Projets en vedette",
-		"viewProject": "Voir le Project",
+		"title": "Autres projets",
+		"live": "Site",
+		"source": "Code",
 		"list": {
-			"1": {
-				"title": "Nantral Platform",
+			"nantral": {
 				"description": "Site étudiant de Centrale Nantes"
 			},
-			"2": {
-				"title": "The Youtube Quiz",
-				"description": "Un jeu de quiz multijoueur sur le thème des miniatures Youtube"
+			"inforeg": {
+				"description": "Logiciel pédagogique pour la théorie des graphes"
 			},
-			"3": {
-				"title": "Inforeg",
-				"description": "Logiciel pédagogique pour la théorie des graphes."
-			},
-			"4": {
-				"title": "Tonique DAW",
-				"description": "Un logiciel d'édition et de création musicale fait avec Rust."
+			"quiz": {
+				"description": "Jeu multijoueur sur les miniatures YouTube"
 			}
 		}
 	},
 	"skills": {
-		"title": "Compétences Techniques"
+		"title": "Compétences Techniques",
+		"groups": {
+			"languages": "Langages",
+			"backend": "Backend et données",
+			"infrastructure": "Infrastructure et outils",
+			"frontend": "Frontend",
+			"ml": "Machine learning"
+		}
 	},
 	"qualification": {
 		"education": {
@@ -46,15 +78,40 @@
 		"experience": {
 			"title": "Expérience",
 			"list": {
-				"1": {
+				"dedomainia": {
+					"title": "Ingénieur Backend",
+					"place": "Dedomainia",
+					"dates": "Sept 2025 - Aujourd'hui",
+					"highlights": [
+						"Développement de LISA, le produit principal de Dedomainia, au sein de l'équipe qui en a la charge : nouvelles fonctionnalités, correction de bugs et modernisation du code historique.",
+						"Intégration de nouvelles fonctionnalités en Rust dans un socle Python/Django."
+					]
+				},
+				"merica": {
 					"title": "Développeur Frontend Stagiaire",
 					"place": "Merica s.r.o, Prague (Tchéquie)",
-					"dates": "Avril 2024 - Sept 2024"
+					"dates": "Avril 2024 - Sept 2024",
+					"highlights": [
+						"Développement d'une application métier de planification industrielle en TypeScript et Vue."
+					]
 				},
-				"2": {
+				"nantral": {
+					"title": "Responsable de Nantral Platform",
+					"place": "Centrale Nantes",
+					"dates": "2023 - 2024",
+					"highlights": [
+						"Maintenance et évolution du site étudiant de Centrale Nantes (500 utilisateurs par an).",
+						"Pilotage d'un projet de refonte du site à 7 étudiants, avec Django, React et Docker."
+					]
+				},
+				"ripple": {
 					"title": "Stagiaire Ingénieur Informatique",
 					"place": "Ripple Motion, Nantes",
-					"dates": "Avril 2022 - Août 2022"
+					"dates": "Avril 2023 - Juillet 2023",
+					"highlights": [
+						"Création en binôme d'une plate-forme chiffrée de bout en bout, en many-to-many, pour des capteurs médicaux.",
+						"Technologies : Python, Django, Apache Kafka, Docker et Ansible."
+					]
 				}
 			}
 		}

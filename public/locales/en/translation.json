@@ -1,31 +1,63 @@
 {
 	"hero": {
-		"title": "Full Stack Developer / Software Engineer"
+		"title": "Backend Engineer at Dedomainia",
+		"tagline": "On the side, I'm building Tonique, a free, open-source music studio written in Rust.",
+		"discoverTonique": "Discover Tonique"
+	},
+	"tonique": {
+		"headline": "A free, open-source music studio for Linux, macOS and Windows.",
+		"description": "Bring in your audio, build your track and export it. No account needed.",
+		"download": "Download for free",
+		"source": "Source code",
+		"imageAlt": "Tonique with a project open: colored audio clips on the timeline, drums in a group, the effects browser and the mixer",
+		"steps": {
+			"arrange": {
+				"title": "Arrange",
+				"description": "Drag in your audio files, loop clips and group tracks on the timeline."
+			},
+			"mix": {
+				"title": "Mix",
+				"description": "Balance your tracks with the mixer and shape them with filter and echo."
+			},
+			"finish": {
+				"title": "Finish",
+				"description": "Save your project and export your track to WAV."
+			}
+		},
+		"performance": {
+			"title": "Built for performance",
+			"description": "Written in Rust, compiled to native code and able to use multiple CPU cores."
+		},
+		"openSource": {
+			"title": "Open source",
+			"description": "All the code is on GitHub under the MIT or Apache-2.0 license. Read it, change it or contribute."
+		}
 	},
 	"projects": {
-		"title": "Featured Projects",
-		"viewProject": "View Project",
+		"title": "Other projects",
+		"live": "Website",
+		"source": "Code",
 		"list": {
-			"1": {
-				"title": "Nantral Platform",
+			"nantral": {
 				"description": "Student website for Centrale Nantes"
 			},
-			"2": {
-				"title": "The Youtube Quiz",
-				"description": "Quiz game where you have to guess the correct Youtube thumbnail"
+			"inforeg": {
+				"description": "Teaching software for graph theory"
 			},
-			"3": {
-				"title": "Inforeg",
-				"description": "Pedagogical software for graph theory."
-			},
-			"4": {
-				"title": "Tonique DAW",
-				"description": "A software to create and edit music made with Rust."
+			"quiz": {
+				"description": "Multiplayer game about YouTube thumbnails"
 			}
 		}
 	},
 	"skills": {
-		"title": "Technical Skills"
+		"title": "Technical Skills",
+		"groups": {
+			"languages": "Languages",
+			"backend": "Backend and data",
+			"infrastructure": "Infrastructure and tools",
+			"frontend": "Frontend",
+			"ml": "Machine learning"
+		}
 	},
 	"qualification": {
 		"education": {
@@ -46,15 +78,40 @@
 		"experience": {
 			"title": "Experience",
 			"list": {
-				"1": {
+				"dedomainia": {
+					"title": "Backend Engineer",
+					"place": "Dedomainia",
+					"dates": "Sept 2025 - Present",
+					"highlights": [
+						"Develop LISA, Dedomainia's main product, within the team that owns it: new features, bug fixes and steady modernization of legacy code.",
+						"Bring Rust into a Python/Django codebase by building new features with it."
+					]
+				},
+				"merica": {
 					"title": "Frontend Developer Intern",
 					"place": "Merica s.r.o, Prague (Czechia)",
-					"dates": "April 2024 - Sept 2024"
+					"dates": "April 2024 - Sept 2024",
+					"highlights": [
+						"Developed a business application for industrial planning with TypeScript and Vue."
+					]
 				},
-				"2": {
+				"nantral": {
+					"title": "Nantral Platform Lead",
+					"place": "Centrale Nantes, France",
+					"dates": "2023 - 2024",
+					"highlights": [
+						"Maintained and extended the Centrale Nantes student website, used by 500 people a year.",
+						"Led a 7-student project to rebuild the site with Django, React and Docker."
+					]
+				},
+				"ripple": {
 					"title": "Software Engineer Intern",
 					"place": "Ripple Motion, Nantes (France)",
-					"dates": "April 2022 - August 2022"
+					"dates": "April 2023 - July 2023",
+					"highlights": [
+						"Built an end-to-end encrypted, many-to-many platform for medical sensors, working in a pair.",
+						"Worked with Python, Django, Apache Kafka, Docker and Ansible."
+					]
 				}
 			}
 		}
@@ -63,6 +120,6 @@
 		"title": "Let's Connect",
 		"contactMe": "Get in Touch",
 		"viewResume": "View Resume",
-		"description": "Have a project in mind? Let&apos;s create something amazing \t\t\t\t\ttogether."
+		"description": "Interested in my profile or in Tonique? Feel free to get in touch."
 	}
 }

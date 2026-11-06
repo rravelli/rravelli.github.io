@@ -1,5 +1,5 @@
 import { motion, Variants } from "framer-motion";
-import { EMAIL, GITHUB_URL, LINKEDIN_URL } from "../constants";
+import { EMAIL, GITHUB_URL, LINKEDIN_URL, RESUME_URL } from "../constants";
 import { useTranslation } from "react-i18next";
 
 const langs: { [l: string]: { name: string } } = {
@@ -19,7 +19,7 @@ export default function HeroSection() {
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			transition={{ duration: 1 }}
-			className="h-screen flex items-center justify-center relative overflow-hidden"
+			className="min-h-svh px-6 py-24 flex items-center justify-center relative overflow-hidden"
 		>
 			<div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-blue-900/20" />
 			<div className="absolute inset-0">
@@ -59,34 +59,35 @@ export default function HeroSection() {
 					opacity: 0.1,
 				}}
 			/>
-			<div className="relative flex items-center pr-70">
-				<motion.img
-					initial={{
-						y: 100,
-						opacity: 0,
-						scale: 0.9,
-					}}
-					animate={{
-						y: 0,
-						opacity: 1,
-						scale: 1,
-						transition: {
-							duration: 0.8,
-							delay: 0.4,
-						},
-					}}
-					src="/showcase/images/profile.png"
-					className="h-150 w-70 object-cover object-center"
-					style={{
-						filter: "drop-shadow(-10px 0 0px rgba(17,24,39,0.7)) drop-shadow(10px 0 0px rgba(17,24,39,0.7)) drop-shadow(10px 0 40px rgba(0,0,0,0.3))",
-					}}
-				/>
-				<div className="z-10 text-center">
+			<div className="relative z-10 w-full max-w-5xl flex flex-col md:flex-row items-center justify-center gap-8 md:gap-14">
+				<picture className="shrink-0">
+					<source media="(min-width: 768px)" srcSet="/showcase/images/profile-full.webp" />
+					<motion.img
+						initial={{
+							y: 100,
+							opacity: 0,
+							scale: 0.9,
+						}}
+						animate={{
+							y: 0,
+							opacity: 1,
+							scale: 1,
+							transition: {
+								duration: 0.8,
+								delay: 0.4,
+							},
+						}}
+						src="/showcase/images/headshot.webp"
+						alt="Rémi Ravelli"
+						className="h-44 w-44 rounded-full object-cover bg-gradient-to-br from-blue-500/40 to-purple-600/40 ring-1 ring-white/20 md:h-[32rem] md:w-auto md:rounded-none md:bg-none md:ring-0 md:[filter:drop-shadow(-10px_0_0_rgba(17,24,39,0.7))_drop-shadow(10px_0_0_rgba(17,24,39,0.7))_drop-shadow(10px_0_40px_rgba(0,0,0,0.3))]"
+					/>
+				</picture>
+				<div className="text-center md:text-left">
 					<motion.h1
 						initial={{ y: 50 }}
 						animate={{ y: 0 }}
 						transition={{ duration: 0.8, delay: 0.2 }}
-						className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600"
+						className="text-5xl md:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600"
 					>
 						Rémi Ravelli
 					</motion.h1>
@@ -94,23 +95,49 @@ export default function HeroSection() {
 						initial={{ y: 50, opacity: 0 }}
 						animate={{ y: 0, opacity: 1 }}
 						transition={{ duration: 0.8, delay: 0.4 }}
-						className="text-lg md:text-xl text-gray-300 mb-8 px-4"
+						className="max-w-xl"
 					>
-						{t("hero.title")}
+						<span className="block text-xl md:text-2xl font-semibold mb-3">
+							{t("hero.title")}
+						</span>
+						<span className="block text-lg text-gray-300 mb-8">
+							{t("hero.tagline")}
+						</span>
 					</motion.p>
 					<motion.div
+						initial={{ y: 50, opacity: 0 }}
+						animate={{ y: 0, opacity: 1 }}
+						transition={{ duration: 0.8, delay: 0.5 }}
+						className="flex flex-col sm:flex-row justify-center md:justify-start gap-3 mb-8"
+					>
+						<a
+							href="#tonique"
+							className="px-6 py-3 text-center font-semibold bg-white text-black rounded-full hover:bg-gray-200 transition-colors"
+						>
+							{t("hero.discoverTonique")}
+						</a>
+						<a
+							href={RESUME_URL}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="px-6 py-3 text-center font-semibold bg-white/10 rounded-full hover:bg-white/20 transition-colors"
+						>
+							{t("contact.viewResume")}
+						</a>
+					</motion.div>
+					<motion.div
 						initial={"hidden"}
-						whileInView={"shown"}
-						viewport={{ once: true }}
+						animate={"shown"}
 						transition={{
 							duration: 0.6,
 							delayChildren: 0.6,
 							staggerChildren: 0.2,
 						}}
-						className="flex justify-center gap-6"
+						className="flex justify-center md:justify-start gap-6"
 					>
 						<motion.a
 							href={GITHUB_URL}
+							aria-label="GitHub"
 							target="_blank"
 							variants={item}
 							rel="noopener noreferrer"
@@ -126,6 +153,7 @@ export default function HeroSection() {
 						</motion.a>
 						<motion.a
 							href={LINKEDIN_URL}
+							aria-label="LinkedIn"
 							target="_blank"
 							variants={item}
 							rel="noopener noreferrer"
@@ -141,6 +169,7 @@ export default function HeroSection() {
 						</motion.a>
 						<motion.a
 							href={`mailto:${EMAIL}`}
+							aria-label="Email"
 							target="_blank"
 							rel="noopener noreferrer"
 							variants={item}
@@ -162,7 +191,8 @@ export default function HeroSection() {
 			<motion.a
 				initial={{ y: 50, opacity: 0 }}
 				animate={{ y: 0, opacity: 1 }}
-				href="#projects"
+				href="#tonique"
+				aria-label={t("hero.discoverTonique")}
 				transition={{ duration: 0.8, delay: 0.8 }}
 				className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
 			>

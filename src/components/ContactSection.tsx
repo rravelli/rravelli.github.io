@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { EMAIL, GITHUB_URL, LINKEDIN_URL } from "../constants";
+import { EMAIL, GITHUB_URL, LINKEDIN_URL, RESUME_URL } from "../constants";
 import { useTranslation } from "react-i18next";
 
 export default function ContactSection() {
@@ -71,7 +71,7 @@ export default function ContactSection() {
 						<span>{t("contact.contactMe")}</span>
 					</a>
 					<a
-						href="/showcase/resume.pdf"
+						href={RESUME_URL}
 						target="_blank"
 						className="group flex items-center gap-2 px-6 py-3 bg-white/5 rounded-full hover:bg-white/10 transition-colors w-full sm:w-auto"
 					>

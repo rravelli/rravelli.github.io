@@ -1,53 +1,65 @@
 import { motion } from "framer-motion";
-import { Education } from "./Education";
-import { useState } from "react";
-import { Experience } from "./Experience";
 import { useTranslation } from "react-i18next";
+
+const experience = ["dedomainia", "merica", "nantral", "ripple"];
+const education = ["1", "2"];
+
+function Timeline({ section, ids }: { section: string; ids: string[] }) {
+	const { t } = useTranslation();
+	return (
+		<ol className="border-l-2 border-white/15 ml-1">
+			{ids.map((id) => {
+				const prefix = `qualification.${section}.list.${id}`;
+				// Absent until the translation file has loaded.
+				const details: unknown = t(`${prefix}.highlights`, {
+					returnObjects: true,
+				});
+				return (
+					<motion.li
+						key={id}
+						initial={{ opacity: 0, x: -20 }}
+						whileInView={{ opacity: 1, x: 0 }}
+						viewport={{ once: true }}
+						transition={{ duration: 0.5 }}
+						className="relative pl-6 pb-10 last:pb-0"
+					>
+						<span className="absolute -left-[7px] top-2 h-3 w-3 rounded-full bg-blue-400" />
+						<div className="flex flex-col sm:flex-row sm:justify-between sm:gap-4">
+							<h3 className="text-xl font-bold">
+								{t(`${prefix}.title`)}
+							</h3>
+							<div className="text-gray-400 shrink-0 sm:pt-1">
+								{t(`${prefix}.dates`)}
+							</div>
+						</div>
+						<div className="text-gray-300">{t(`${prefix}.place`)}</div>
+						{Array.isArray(details) && (
+							<ul className="mt-3 list-disc pl-5 space-y-1 text-gray-300">
+								{details.map((detail: string) => (
+									<li key={detail}>{detail}</li>
+								))}
+							</ul>
+						)}
+					</motion.li>
+				);
+			})}
+		</ol>
+	);
+}
 
 export default function QualificationSection() {
 	const { t } = useTranslation();
-	const [selected, setSelected] = useState<"experience" | "education">(
-		"education"
-	);
 	return (
 		<section className="py-20 px-4 bg-gray-900/70">
-			<div className="max-w-4xl mx-auto">
-				<div className="flex flex-col sm:flex-row justify-center gap-4 mb-4">
-					<motion.h2
-						onClick={() => setSelected("education")}
-						style={{
-							color:
-								selected === "education"
-									? "var(--color-purple-600)"
-									: undefined,
-							textDecorationLine:
-								selected === "education"
-									? "underline"
-									: undefined,
-						}}
-						className="text-3xl font-bold text-center p-2 rounded-md cursor-pointer transition duration-200 hover:bg-[rgba(255,255,255,0.1)]"
-					>
-						{t("qualification.education.title")}
-					</motion.h2>
-					<motion.h2
-						onClick={() => setSelected("experience")}
-						style={{
-							color:
-								selected === "experience"
-									? "var(--color-purple-600)"
-									: undefined,
-							textDecorationLine:
-								selected === "experience"
-									? "underline"
-									: undefined,
-						}}
-						className="text-3xl font-bold text-center p-2 rounded-md cursor-pointer transition duration-200 hover:bg-[rgba(255,255,255,0.1)]"
-					>
-						{t("qualification.experience.title")}
-					</motion.h2>
-				</div>
-				{selected === "education" && <Education />}
-				{selected === "experience" && <Experience />}
+			<div className="max-w-3xl mx-auto">
+				<h2 className="text-3xl md:text-4xl font-bold mb-10">
+					{t("qualification.experience.title")}
+				</h2>
+				<Timeline section="experience" ids={experience} />
+				<h2 className="text-3xl md:text-4xl font-bold mt-16 mb-10">
+					{t("qualification.education.title")}
+				</h2>
+				<Timeline section="education" ids={education} />
 			</div>
 		</section>
 	);
