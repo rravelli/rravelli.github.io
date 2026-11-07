@@ -4,3 +4,5 @@ export const EMAIL = "remi.ravelli@gmail.com";
 export const RESUME_URL = "/resume.pdf";
 export const TONIQUE_URL = "https://github.com/rravelli/ToniqueDAW";
 export const TONIQUE_SITE_URL = "https://rravelli.github.io/tonique/";
+export const TONIQUE_SCREENSHOT_URL =
+	"https://raw.githubusercontent.com/rravelli/ToniqueDAW/master/images/screenshot.png";

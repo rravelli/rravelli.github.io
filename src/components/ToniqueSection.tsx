@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { TONIQUE_SITE_URL, TONIQUE_URL } from "../constants";
+import { TONIQUE_SCREENSHOT_URL, TONIQUE_SITE_URL, TONIQUE_URL } from "../constants";
+
+const STACK = ["Rust", "egui / eframe", "cpal", "Symphonia", "rustfft", "Signalsmith Stretch"];
 
 export default function ToniqueSection() {
 	const { t } = useTranslation();
@@ -13,6 +15,9 @@ export default function ToniqueSection() {
 				transition={{ duration: 0.6 }}
 				className="max-w-4xl"
 			>
+				<span className="inline-block mb-4 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-blue-300 bg-blue-500/10 border border-blue-400/30 rounded-full">
+					{t("tonique.mainProject")}
+				</span>
 				<div className="flex items-center gap-3 mb-5">
 					<img
 						src="/images/tonique-logo.svg"
@@ -29,26 +34,31 @@ export default function ToniqueSection() {
 				<p className="text-lg md:text-xl text-gray-300 mb-6 max-w-3xl">
 					{t("tonique.description")}
 				</p>
+				<p className="text-sm text-gray-400 mb-3">{t("tonique.stackLabel")}</p>
+				<ul className="flex flex-wrap gap-2 mb-8">
+					{STACK.map((tech) => (
+						<li
+							key={tech}
+							className="px-3 py-1 text-sm font-mono text-gray-200 bg-white/5 border border-white/10 rounded-md"
+						>
+							{tech}
+						</li>
+					))}
+				</ul>
 				<div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
 					<a
-						href={`${TONIQUE_SITE_URL}download/`}
+						href={TONIQUE_URL}
+						target="_blank"
+						rel="noopener noreferrer"
 						className="px-6 py-3 text-center font-semibold bg-white text-black rounded-full hover:bg-gray-200 transition-colors"
 					>
-						{t("tonique.download")}
+						{t("tonique.source")}
 					</a>
 					<a
 						href={TONIQUE_SITE_URL}
 						className="text-center text-gray-300 underline underline-offset-4 decoration-white/30 hover:text-white hover:decoration-white transition-colors"
 					>
 						{t("tonique.learnMore")}
-					</a>
-					<a
-						href={TONIQUE_URL}
-						target="_blank"
-						rel="noopener noreferrer"
-						className="text-center text-gray-300 underline underline-offset-4 decoration-white/30 hover:text-white hover:decoration-white transition-colors"
-					>
-						{t("tonique.source")}
 					</a>
 				</div>
 			</motion.div>
@@ -58,10 +68,10 @@ export default function ToniqueSection() {
 				whileInView={{ opacity: 1, y: 0 }}
 				viewport={{ once: true }}
 				transition={{ duration: 0.8 }}
-				src="/images/tonique.webp"
+				src={TONIQUE_SCREENSHOT_URL}
 				alt={t("tonique.imageAlt")}
-				width={3250}
-				height={2025}
+				width={1625}
+				height={1013}
 				loading="lazy"
 				className="mt-10 w-full h-auto rounded-xl border border-white/10 shadow-2xl shadow-blue-900/30"
 			/>

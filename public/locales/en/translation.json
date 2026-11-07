@@ -5,9 +5,10 @@
 		"discoverTonique": "Discover Tonique"
 	},
 	"tonique": {
-		"headline": "A free, open-source music studio for Linux, macOS and Windows.",
-		"description": "Bring in your audio, build your track and export it.",
-		"download": "Download for free",
+		"mainProject": "Main project",
+		"headline": "A digital audio workstation, built from scratch in Rust.",
+		"description": "A real-time audio engine in its own crate, cross-platform audio I/O, a GPU-rendered immediate-mode UI, and time-stretching on the audio thread. Runs on Linux, macOS and Windows.",
+		"stackLabel": "Built with",
 		"source": "Source code",
 		"imageAlt": "Tonique with a project open: colored audio clips on the timeline, drums in a group, the effects browser and the mixer",
 		"learnMore": "Discover Tonique"

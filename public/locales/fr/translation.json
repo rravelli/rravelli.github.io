@@ -5,9 +5,10 @@
 		"discoverTonique": "Découvrir Tonique"
 	},
 	"tonique": {
-		"headline": "Un studio de musique gratuit et open source pour Linux, macOS et Windows.",
-		"description": "Importez vos sons, composez votre morceau et exportez-le.",
-		"download": "Télécharger gratuitement",
+		"mainProject": "Projet principal",
+		"headline": "Un logiciel de production musicale, développé de A à Z en Rust.",
+		"description": "Un moteur audio temps réel dans sa propre crate, des entrées/sorties audio multiplateformes, une interface immediate-mode rendue par le GPU et du time-stretching sur le thread audio. Tourne sous Linux, macOS et Windows.",
+		"stackLabel": "Construit avec",
 		"source": "Code source",
 		"imageAlt": "Tonique avec un projet ouvert : des clips audio colorés sur la timeline, une batterie groupée, le navigateur d'effets et la table de mixage",
 		"learnMore": "Découvrir Tonique"
